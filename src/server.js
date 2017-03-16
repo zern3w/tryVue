@@ -9,14 +9,13 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('/', function(req, res){
-res.sendfile("./index.html");
+  res.sendfile("./index.html");
 });
 
 app.post('/', function(req, res){
   var name = req.body.txt;
-  var html = 'Hello: ' + name + '<br>' +
-             '<a href="/">Try again.</a>';
-  res.send(html);
+  // res.sendfile("./index.html");
+  res.send('What is up ' + name + '!');
 });
 
 app.listen(80);
